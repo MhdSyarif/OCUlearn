@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="OCU LEARN" />
+  <meta name="keywords" content="OCU LEARN" />
+  <meta name="language" content="Indonesia" />
+
+  <!-- Site Properties -->
+  <title>Ocu Learn</title>
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="" />
+
+  <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/tab.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" type="text/css" href="dist/style.css">
+
+  <script src="dist/jquery.min.js"></script>
+  <script src="dist/semantic.min.js"></script>
+  <script src="dist/components/visibility.js"></script>
+  <script src="dist/components/sidebar.js"></script>
+  <script src="dist/components/transition.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+      //Accordion
+      $('.ui.accordion')
+        .accordion()
+      ;
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<!-- <div class="ui large top fixed hidden menu">
+  <div class="ui container">
+  <img class="logo" src="assets/images/oculearn.png">
+    <a class="active item">Home</a>
+    <a class="item">Kelas</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Home</a>
+  <a class="item">Kelas</a>
+<!--   <a class="item">Company</a>
+  <a class="item">Login</a>
+  <a class="item">Signup</a> -->
+</div>
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+    <div id="particles-js">
+      <div class="ui container">
+        <!-- <div class="ui pointing menu"> -->
+        <div class="ui large secondary inverted pointing menu">
+          <a class="toc item">
+            <i class="sidebar icon"></i>
+          </a>
+          <div class="ui slide left instant reveal">
+            <div class="visible content">
+              <img src="assets/images/oculearn.png" class="ui small image">
+            </div>
+            <div class="hidden content">
+              <img src="assets/images/oculearn.png" class="ui small image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui text container">
+        <h1 class="ui inverted header">
+          OCU LEARN
+        </h1>
+        <h2>Easy Learning</h2>
+        <!-- <img class="logo" src="assets/images/oculearn.png"> -->
+        <!-- <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div> -->
+      </div>
+    </div>
+  </div>
+  <div class="ui  stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+          <h3>PHP</h3>
+          <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+          <a>
+            <i class="users icon"></i>
+            12 Members
+          </a>
+          <h2><button class="ui red basic button" data-content="Lihat Materi" onclick="lihat_materi(); return false;">Materi</button></h2>
+        </div>
+        <div class="column">
+          <h3>HTML</h3>
+          <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+          <a>
+            <i class="users icon"></i>
+            10 Members
+          </a>
+          <h2><button class="ui blue basic button" data-content="Lihat Materi" onclick="lihat_materi(); return false;">Materi</button></h2>
+        </div>
+        <div class="column">
+          <h3>JAVASCRIPT</h3>
+          <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+          <a>
+            <i class="users icon"></i>
+            12 Members
+          </a>
+          <h2><button class="ui red basic button" data-content="Lihat Materi" onclick="lihat_materi(); return false;">Materi</button></h2>
+        </div>
+        <div class="column">
+          <h3>CSS</h3>
+          <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+          <a>
+            <i class="users icon"></i>
+            12 Members
+          </a>
+          <h2><button class="ui blue basic button" data-content="Lihat Materi" onclick="lihat_materi(); return false;">Materi</button></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="ten wide column">
+          <div class="ui styled fluid accordion">
+            <div class="title">
+              <i class="dropdown icon"></i>
+              Tagline: Easy Learning
+            </div>
+            <div class="content">
+              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+            <div class="active title">
+              <i class="dropdown icon"></i>
+              Tentang Workshop
+            </div>
+            <div class="active content">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+
+              <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
+
+            </div>
+            <div class="title">
+              <i class="dropdown icon"></i>
+              Materi ?
+            </div>
+            <div class="content">
+              HTML & PHP Basic
+            </div>
+          </div>
+        </div>
+        <div class="six wide right floated column">
+          <div class="ui slide left instant reveal">
+            <div class="visible content">
+              <img src="assets/images/avatar/tom.jpg" class="ui large bordered rounded image">
+            </div>
+            <div class="hidden content">
+              <img src="assets/images/avatar/nan.jpg" class="ui large bordered rounded image">
+            </div>
+          </div>
+          <!-- <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image"> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="center aligned column">
+          <a class="ui huge button">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+          <h3>OCU LEARN</h3>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+        <div class="column">
+          <h3>"I shouldn't have gone with their competitor."</h3>
+          <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical stripe segment">  
+  	<h4 class="ui horizontal header divider">
+      <a href="#">Staf Pengajar</a>
+    </h4>
+	<div class="ui centered link cards">
+	  <div class="card">
+	    <div class="image">
+	      <img src="assets/images/avatar/nan.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="header">Matt Giampietro</div>
+	      <div class="meta">
+	        <a>Friends</a>
+	      </div>
+	      <div class="description">
+	        Matthew is an interior designer living in New York.
+	      </div>
+	    </div>
+	    <div class="extra content">
+	      <span class="right floated">
+	        Joined in 2013
+	      </span>
+	      <span>
+	        <i class="user icon"></i>
+	        75 Friends
+	      </span>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <div class="image">
+	      <img src="assets/images/avatar/tom.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="header">Molly</div>
+	      <div class="meta">
+	        <span class="date">Coworker</span>
+	      </div>
+	      <div class="description">
+	        Molly is a personal assistant living in Paris.
+	      </div>
+	    </div>
+	    <div class="extra content">
+	      <span class="right floated">
+	        Joined in 2011
+	      </span>
+	      <span>
+	        <i class="user icon"></i>
+	        35 Friends
+	      </span>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <div class="image">
+	      <img src="assets/images/avatar/nan.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="header">Elyse</div>
+	      <div class="meta">
+	        <a>Coworker</a>
+	      </div>
+	      <div class="description">
+	        Elyse is a copywriter working in New York.
+	      </div>
+	    </div>
+	    <div class="extra content">
+	      <span class="right floated">
+	        Joined in 2014
+	      </span>
+	      <span>
+	        <i class="user icon"></i>
+	        151 Friends
+	      </span>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <div class="image">
+	      <img src="assets/images/avatar/tom.jpg">
+	    </div>
+	    <div class="content">
+	      <div class="header">Elyse</div>
+	      <div class="meta">
+	        <a>Coworker</a>
+	      </div>
+	      <div class="description">
+	        Elyse is a copywriter working in New York.
+	      </div>
+	    </div>
+	    <div class="extra content">
+	      <span class="right floated">
+	        Joined in 2014
+	      </span>
+	      <span>
+	        <i class="user icon"></i>
+	        151 Friends
+	      </span>
+	    </div>
+	  </div>
+	</div>
+  </div>
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+      <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+      <a class="ui large button">Read More</a>
+      <h4 class="ui horizontal header divider">
+        <a href="#">Case Studies</a>
+      </h4>
+      <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+      <p>Yes I know you probably disregarded the earlier boasts as non-sequitor filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
+      <a class="ui large button">I'm Still Quite Interested</a>
+    </div>
+  </div>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="#" class="item">Contact Us</a>
+            <a href="#" class="item">Religious Ceremonies</a>
+            <a href="#" class="item">Gazebo Plans</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Banana Pre-Order</a>
+            <a href="#" class="item">DNA FAQ</a>
+            <a href="#" class="item">How To Access</a>
+            <a href="#" class="item">Favorite X-Men</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Materi
+  </div>
+  <div class="image content">
+    <div class="ui medium image">
+      <img src="assets/images/avatar/tom.jpg">
+    </div>
+    <div class="description">
+      <div class="ui header">We've auto-chosen a profile image for you.</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+<script type="text/javascript">
+$(document)
+  .ready(function() {
+      // add popup to show name
+      $('.ui:not(.container, .grid)').each(function() {
+        $(this)
+          .popup({
+            on        : 'hover',
+            variation : 'small inverted',
+            exclusive : true,
+            tooltip   : $(this).attr('class')
+          })
+        ;
+      });
+  })
+;
+function lihat_materi(){
+ $('.ui.modal')
+  .modal('setting', 'transition', 'horizontal flip')
+  .modal('show')
+ ;  
+}
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 80,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "edge",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 4
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": false,
+                "mode": "grab"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": false
+});
+</script>
